@@ -34,7 +34,7 @@
 --
 --  Rta/
 --     K0   c01  c02    c03  c04
---  0  ﻿A  5000  900  NMNJL  0.4
+--  0   A  5000  900  NMNJL  0.4
 --  1   C  1000  600  LMMML  0.2
 --  2   D  4000  600  PJLJL  0.4
 --  3   F  2000  300  NNPJO  0.3
@@ -42,3 +42,10 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+
+SELECT
+	*
+FROM
+	tbl0
+WHERE
+	c02 >= 300
