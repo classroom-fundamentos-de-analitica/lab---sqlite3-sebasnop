@@ -41,3 +41,14 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+
+SELECT
+	YEAR, avg(c21)
+FROM (
+	SELECT
+		c21, strftime('%Y', c23) AS YEAR
+	FROM
+		tbl2
+	)
+GROUP BY
+	YEAR
