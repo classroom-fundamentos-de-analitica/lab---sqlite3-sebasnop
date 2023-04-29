@@ -43,12 +43,8 @@
 --
 
 SELECT
-	YEAR, avg(c21)
-FROM (
-	SELECT
-		c21, strftime('%Y', c23) AS YEAR
-	FROM
-		tbl2
-	)
+	avg(c21), strftime('%Y', c23)
+FROM
+	tbl2
 GROUP BY
-	YEAR
+	strftime('%Y', c23)
