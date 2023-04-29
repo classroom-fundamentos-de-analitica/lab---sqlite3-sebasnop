@@ -46,7 +46,7 @@ SELECT
 FROM
     (
         SELECT
-            K0, c16
+            tbl0.K0, c16
         FROM
             tbl0
             INNER JOIN
