@@ -54,4 +54,4 @@ FROM
             ON tbl0.K0 = tbl1.K0;
     )
 WHERE
-    LEFT(c16, 1) = K0
+    LEFT(c16, 1) = K0;
