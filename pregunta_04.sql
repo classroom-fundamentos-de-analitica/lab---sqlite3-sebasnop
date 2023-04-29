@@ -42,16 +42,16 @@
 -- 
 
 SELECT
-    *
-FROM
-    (
-        SELECT
-            tbl0.K0, c16
-        FROM
-            tbl0
-            INNER JOIN
-            tbl1
-            ON tbl0.K0 = tbl1.K0;
-    )
+	K0, c16
+FROM (
+	SELECT
+		tbl0.K0, c16, SUBSTR(c16, 1, 1) AS first_letter
+	FROM
+		tbl0
+		INNER JOIN
+    	tbl1
+	ON
+		tbl0.K0 = tbl1.K0
+	)
 WHERE
-    LEFT(c16, 1) = K0;
+	K0 = first_letter
