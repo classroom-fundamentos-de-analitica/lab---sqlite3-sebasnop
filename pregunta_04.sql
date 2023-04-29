@@ -45,13 +45,9 @@ SELECT
 	K0, c16
 FROM (
 	SELECT
-		tbl0.K0, c16, SUBSTR(c16, 1, 1) AS first_letter
+		K0, c16, SUBSTR(c16, 1, 1) AS first_letter
 	FROM
-		tbl0
-		INNER JOIN
-    	tbl1
-	ON
-		tbl0.K0 = tbl1.K0
+		tbl1
+	WHERE
+		K0 = first_letter
 	)
-WHERE
-	K0 = first_letter
